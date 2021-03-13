@@ -1,4 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 10px #fff;
+          box-shadow: 0 3px 10px #fff;
+  padding: 20px;
+  margin: 10px;
+}
+
 .navbar {
   background-color: #047aed;
   color: #fff;
@@ -21,21 +59,17 @@
   border-bottom: 2px #fff solid;
 }
 
+.navbar .flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
   overflow: auto;
   padding: 0 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
 }
 
 * {
@@ -72,5 +106,53 @@ p {
 
 img {
   width: 100%;
+}
+
+.showcase {
+  height: 400px;
+  background-color: #047aed;
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  -ms-grid-columns: 55% 45%;
+      grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type='text'], .showcase-form input[type='email'] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,21 +2,32 @@
 $lightgray:#333;
 $blue:#047aed;
 $white:#fff;
-
-//flex
-@mixin flex($justify) {
+$inputgray:#b4becb;
+.flex{
     display: flex;
-    justify-content: $justify;
+    justify-content: center;
     align-items: center;
     height: 100%;
 }
 
 //grid
-@mixin grid {
+.grid {
     display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
 }
 
 //card
-@mixin card {
-    display: grid;
+.card {
+    background-color: $white;
+    color: $lightgray;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px $white;
+    padding: 20px;
+    margin: 10px;
 }
+
