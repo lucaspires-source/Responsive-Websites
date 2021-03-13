@@ -2,3 +2,21 @@
 $lightgray:#333;
 $blue:#047aed;
 $white:#fff;
+
+//flex
+@mixin flex($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    height: 100%;
+}
+
+//grid
+@mixin grid {
+    display: grid;
+}
+
+//card
+@mixin card {
+    display: grid;
+}
